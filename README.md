@@ -1,29 +1,64 @@
 # ExpiryNotification
-This NodeJS application reads data from Excel file and send the email notification using SMTP for expiry date of products
 
-## Prerequistics
-0. install a nodejs on you device
-1. npm init -y -> to create a node project
-2. npm install xlsx -> install xlsx dependecy to read xlsx file
-3. npm nodemailer -> depeedency to send email
-4. node fileName -> run the file
+ExpiryNotification is a NodeJS application that reads data from an Excel file and sends email notifications using SMTP for the expiry date of products. This document provides an overview of how to install, configure, and automate the application.
 
-## For utomation of file 
-two make this file run daily 
-use the task manager.
-Open Task Scheduler: Press Windows + R, type taskschd.msc, and press Enter.
+## Prerequisites
 
-Create a New Task: In the right-hand panel, click on "Create Basic Task..."
+Before you begin, make sure you have NodeJS installed on your device.
 
-Name the Task: Provide a name and description for the task, then click "Next."
+### Installation Steps
 
-Set the Trigger: Choose "Daily" and specify the time you want the task to run each day. Click "Next."
+1. **Create a Node Project:**
+   ```
+   npm init -y
+   ```
 
-Set the Action: Choose "Start a program" as the action, then click "Next."
+2. **Install xlsx Dependency:**
+   ```
+   npm install xlsx
+   ```
+   This will allow you to read xlsx files.
 
-Specify the Program:
+3. **Install Nodemailer Dependency:**
+   ```
+   npm install nodemailer
+   ```
+   This will enable you to send emails.
 
-In the "Program/script" field, enter the path to your Node.js executable (e.g., C:\Program Files\nodejs\node.exe).
-In the "Add arguments" field, enter the path to your main.js script (e.g., C:\path\to\your\main.js).
-In the "Start in" field, enter the directory containing your main.js file (e.g., C:\path\to\your\).
-Finish the Setup: Click "Next" and then "Finish."
+4. **Run the File:**
+   ```
+   node fileName.js
+   ```
+
+## Automating the File Execution
+
+To make this file run daily, use the task manager and follow these steps:
+
+1. **Open Task Scheduler:**
+   Press Windows + R, type `taskschd.msc`, and press Enter.
+
+2. **Create a New Task:**
+   In the right-hand panel, click on "Create Basic Task..."
+
+3. **Name the Task:**
+   Provide a name and description for the task, then click "Next."
+
+4. **Set the Trigger:**
+   Choose "Daily" and specify the time you want the task to run each day. Click "Next."
+
+5. **Set the Action:**
+   Choose "Start a program" as the action, then click "Next."
+
+6. **Specify the Program:**
+   - In the "Program/script" field, enter the path to your Node.js executable (e.g., `C:\Program Files\nodejs\node.exe`).
+   - In the "Add arguments" field, enter the path to your `fileName.js` script (e.g., `C:\path\to\your\fileName.js`).
+   - In the "Start in" field, enter the directory containing your `fileName.js` file (e.g., `C:\path\to\your\`).
+
+7. **Finish the Setup:**
+   Click "Next" and then "Finish."
+
+---
+
+Please ensure that you have the necessary permissions and that the paths are correct for your system.
+
+Feel free to reach out if you need additional support or documentation!
